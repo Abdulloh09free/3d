@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: calibri;
+}
+body {
+
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(lime, cyan);
+	position: relative;
+}
+nav	{
+	position: relative;
+	width: 1200px;
+	height: 10vh;
+	border: 2px solid black;
+	border-radius: 20px;
+	top: 50px;
+	left: calc(50% - 600px);
+	overflow: hidden	;
+	
+}
+.logo {
+	float: left;
+	width: 15%;
+	height: 100%;
+}
+h1 {
+	position: absolute;
+	left: 40px;
+	font-size: 65px;
+	font-weight: 900px;
+}	
+.link > a {
+	text-decoration: none;
+	color: black;
+	margin: 20px;
+	top: 25px;
+}
+
+button {
+	width: 100px;
+	height: 40px;
+	background:#7FFF00;
+	position: absolute;
+	top: 25px;
+	left: 10px;
+	font-size: 20px;
+	color: white;
+}
+.link {
+	width: 800px;
+	height: 100px;
+	perspective: 150000px;
+	transition: 3s;
+	font-size: 30px;
+	transform-style: preserve-3d;
+	float: right;	
+	right: 20px;	
+}
+.top, .bottom, .front, .back {
+	width: 800px;
+	height: 100px;
+	border: 2px solid green;
+	background: rgba(150, 243, 93, 0ю3);
+	position: absolute;
+
+}
+.top {
+	top: -50px;
+	transform: rotateX(90deg);
+}
+.bottom {
+	padding: 25px;
+	top: 50px;
+	transform: rotateX(-90deg);
+	
+}
+.front {
+	padding: 25px;
+	transform: translateZ(	50px);
+}
+.back {
+	transform: translateZ( -50px);
+}
+.front > a {
+	margin:45px;
+}
+.bottom > a {
+	margin: 40px;
+}
+.box {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	perspective: 15000px;	
+	float: right;
+	transform-style: preserve-3d;
+	animation: Ruh 10s linear infinite;
+	top: 250px;
+	left: 100px;
+}
+.top1, .bottom1, .left1, .right1, .front1, .back1 {
+	width: 300px;
+	height: 300px;
+	border: 2px solid limegreen;
+	background: rgba(150, 243, 93, .3);
+	position: absolute;
+}
+.top1 {
+	top: -150px;
+	transform: rotateX(90deg);
+}
+.bottom1 {
+	top: 150px;
+	transform: rotateX(90deg);
+}
+.left1 {
+	left: -150px;
+	transform: rotateY(90deg);
+}
+.right1 {
+	left: 150px;
+	transform: rotateY(90deg);
+}
+.front1 {
+	
+	transform: translateZ(150px);
+}
+.back1 {
+	
+	transform: translateZ( -150px);
+}
+button:hover + .link {
+	transform: rotateX(90deg);
+
+}
+@keyframes Ruh {
+	0% {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	20% {
+		background: rgba(150, 243, 93, .3);
+	}
+	100% {
+		transform: rotateX(360deg) rotateY(360deg);
+	}
+}
